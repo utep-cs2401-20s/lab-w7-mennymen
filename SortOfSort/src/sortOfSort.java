@@ -1,6 +1,10 @@
 public class SortOfSort {
 
     public static void sortOfSort(int[] arr){
+        //this is kind of a base case, where the array only has one value or no values and there's nothing to sort
+        if(arr.length <= 1)
+            return;
+
         //counter is used to know if the largest value is going at the beginning or the end of the array
         int counter  = 0;
 
@@ -9,14 +13,10 @@ public class SortOfSort {
         int endIndex = arr.length-1;
 
         //max is the index of the maximum value in the array
-        int max = 0;
+        int max;
 
         //this boolean is used to place the maximum value at the beginning or the end of the array
         boolean lastIndex = true;
-
-        //this is kind of a base case, where the array only has one value or no values and there's nothing to sort
-        if(arr.length <= 1)
-            return;
 
         for(int i = 0; i < arr.length; i++) {
 
